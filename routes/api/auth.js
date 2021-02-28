@@ -17,7 +17,7 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-//Login User Route, Public route
+//Log In User Route, Public route
 router.post(
   '/',
   [
