@@ -5,7 +5,7 @@ const bcyrpt = require('bcryptjs');
 const User = require('../../models/User');
 const auth = require('../../middleware/auth');
 const config = require('config');
-const { check, validationResult } = require('express-validator/check');
+const { check, validationResult } = require('express-validator');
 
 router.get('/', auth, async (req, res) => {
   try {
