@@ -137,6 +137,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 5px;
 }
 
 .badge {
@@ -212,6 +213,7 @@ img {
 .bg-light,
 .badge-light {
   border: #ccc solid 1px;
+  border-radius: 15px;
 }
 
 .round-img {
