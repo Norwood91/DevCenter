@@ -22,7 +22,6 @@ const Experience = ({ experience, deleteExperience }) => {
         <button
           onClick={() => deleteExperience(exp._id)}
           className='btn btn-danger'
-          style={{ 'border-radius': '5px' }}
         >
           <i className='fas fa-trash-alt'></i>
         </button>
