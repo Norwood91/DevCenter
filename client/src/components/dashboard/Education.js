@@ -9,12 +9,12 @@ const Education = ({ education, deleteEducation }) => {
       <td>{edu.school}</td>
       <td>{edu.degree}</td>
       <td>
-        <Moment format='YYYY/MM/DD'>{edu.from}</Moment> -{' '}
+        <Moment format='MM/DD/YYYY'>{edu.from}</Moment> -{' '}
         {/*If this is current job (it will be null), show 'from - Present', else show 'to' date */}
         {edu.to === null ? (
           'Present'
         ) : (
-          <Moment format='YYYY/MM/DD'>{edu.to}</Moment>
+          <Moment format='MM/DD/YYYY'>{edu.to}</Moment>
         )}
       </td>
       <td>
