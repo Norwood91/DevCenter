@@ -21,7 +21,7 @@ const Education = ({ education, deleteEducation }) => {
         <button
           onClick={() => deleteEducation(edu._id)}
           className='btn btn-danger'
-          style={{ 'border-radius': '5px' }}
+          style={{ borderRadius: '5px' }}
         >
           <i className='fas fa-trash-alt'></i>
         </button>
