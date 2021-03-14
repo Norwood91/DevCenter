@@ -11,6 +11,7 @@ const PostItem = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date },
+  showActions,
 }) => {
   return (
     <Fragment>
@@ -41,12 +42,17 @@ const PostItem = ({
           >
             <i className='fas fa-thumbs-down'></i>
           </button>
-          <Link to={`/post/${_id}`} className='btn btn-primary'>
-            Discussion{' '}
-            {comments.length > 0 && (
-              <span className='comment-count'>{comments.length}</span>
-            )}
-          </Link>
+
+          {showActions && (
+            <Fragment>
+              <Link to={`/posts/${_id}`} className='btn btn-primary'>
+                Discussion{' '}
+                {comments.length > 0 && (
+                  <span className='comment-count'>{comments.length}</span>
+                )}
+              </Link>
+            </Fragment>
+          )}
           {!auth.loading && user === auth.user._id && (
             <button
               onClick={(e) => deletePost(_id)}
@@ -60,6 +66,10 @@ const PostItem = ({
       </div>
     </Fragment>
   );
+};
+
+PostItem.defaultProps = {
+  showActions: true,
 };
 
 PostItem.propTypes = {
